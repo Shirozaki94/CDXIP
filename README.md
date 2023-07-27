@@ -1,6 +1,6 @@
 # CDXIP
 
-## Program se scaneaza IP-urile pe un port anume
+## Program ce scaneaza IP-urile pe un port anume
 
 Prin acest program se scaneaza IP-urile pe un port anume ce trimit pachete mari listandu-le intr-un excell.
 
