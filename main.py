@@ -1,9 +1,11 @@
 import socket
 from datetime import datetime
-
 import matplotlib.pyplot as plt
+import seaborn as sns
 from matplotlib.animation import FuncAnimation
 
+# Set the style for the plots
+sns.set_style("whitegrid")
 interface_ip = '192.168.1.80'
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_IP)
@@ -33,7 +35,7 @@ def update_plot(i):
 
     # Update histogram
     ax1.clear()
-    ax1.hist(packet_sizes, bins=20, color='blue', alpha=0.7)
+    sns.histplot(packet_sizes, bins=20, ax=ax1, color='blue', kde=True)
     ax1.set_title("Histogram of Packet Sizes")
     ax1.set_xlabel("Packet Size")
     ax1.set_ylabel("Frequency")
